@@ -1,0 +1,54 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    transition: background-color 0.3s;
+  }
+  
+  .navbar.dark {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .navbar-left button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: inherit;
+    cursor: pointer;
+  }
+  
+  .navbar-center .theme-toggler {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+  
+  .navbar-center .material-symbols-sharp {
+    font-size: 30px;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .navbar-right .profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-right .info {
+    margin-right: 10px;
+  }
+  
+  .navbar-right .profile-photo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  

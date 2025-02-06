@@ -1,0 +1,67 @@
+/* تصميم عام للـ Insights */
+.insights {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 20px;
+;
+}
+
+/* تصميم العناصر داخل الـ Insights (الـ Cards) */
+.insight-item {
+  background: #d7ccc8; /* لون خلفية البيج */
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  left: 200px;
+}
+
+/* شريط التقدم داخل الـ Card */
+.insight-item .progress-bar {
+  height: 8px;
+  border-radius: 5px;
+  background-color: #b5a79d; /* لون شريط التقدم */
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+
+/* حالة التقدم (اللون البني) */
+.insight-item .progress-bar span {
+  display: block;
+  height: 100%;
+  background-color: #5d4037; /* اللون البني لشريط التقدم */
+  border-radius: 5px;
+}
+
+/* تصميم النص داخل العنصر */
+.insight-item h3 {
+  font-size: 1.2rem;
+  color: #333; /* اللون الأساسي للنص */
+  margin-bottom: 10px;
+}
+
+.insight-item h1 {
+  font-size: 2.5rem;
+  color: #212121; /* لون النص الأساسي */
+  font-weight: bold;
+}
+
+/* تأثير الوضع الداكن */
+.dark-theme-variables .insight-item {
+  background: #3e2723; /* لون خلفية داكن */
+  color: #ffffff;
+}
+
+/* شريط التقدم في الوضع الداكن */
+.dark-theme-variables .insight-item .progress-bar {
+  background-color: #5d4037; /* الخلفية في الوضع الداكن */
+}
+
+.dark-theme-variables .insight-item .progress-bar span {
+  background-color: #d7ccc8; /* لون شريط التقدم في الوضع الداكن */
+}

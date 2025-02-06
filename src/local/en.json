@@ -1,0 +1,161 @@
+{
+    "about-title":"About us",
+    "about-p2":"school dedicated to teaching kids the fundamentals of coding in a fun and interactive way. Our mission is to empower young minds with essential tech skills, fostering creativity and problem-solving abilities. Through engaging lessons and hands-on projects, we prepare the next generation for a future driven by technology.",
+     "location1" :"aqaba-Jordan",
+     "Home":"Home",
+     "About Us":"About Us",
+     "contact":"Contact",
+     "Login" :"Login",
+     "Sign Up":"Sign Up",
+
+
+     "Footer": {
+        "Box1": {
+          "link1": "Company",
+          "link2": "About Us",
+          "link3": "Jobs",
+          "link4": "Partners",
+          "link5": "User Reviews"
+        },
+        "Box2" : {
+          "link1" : "Curriculum",
+          "link2" : "Courses",
+          "link3" : "Standards",
+          "link4" : "Hour of Code"
+        },
+        "Box3" : {
+          "link1" : "PLANS",
+          "link2" : "Teacher Plans",
+          "link3" : "Parent Plans" ,
+          "link4" : "Give a Gift" 
+        },
+        "Box4" : {
+          "link1" : "Follow us"
+  
+        }
+      },
+      "hero" :{
+  "title" : "Future Coders",
+  "subtitle" : "Learn coding the fun and easy way!",
+  "description" : "An interactive platform for kids to develop their creativity and coding skills through games, exciting projects, and kid-friendly lessons.",
+  "about_paragraph":"Future Coders is an innovative educational platform aimed at empowering individuals to acquire the digital and programming skills they need in the modern technological era.Future Coders stands out with its interactive learning methodology, making it easy for both beginners and professionals to effectively develop their skills. Whether you're looking to start a career in technology or enhance your current skills, Future Coders provides you with the tools and knowledge necessary to achieve your goals."
+},
+
+"team" :{
+    "title":"team",
+  "name" :{
+    "name1" :"Mohammed Alomari",
+    "name2" : "Ahmad Owais",
+    "name3" : "Yaqoot Gharaibeh ",
+    "name4" : "Saba Atia",
+    "name5" : "Enas Abu Nassar" ,
+    "name6" : "Sedra al awad"
+  },
+  "role" : {
+    "role1" : "Director",
+    "role2" :"Deputy Director",
+    "role3":"Teacher",
+    "role4" :"Teacher",
+    "role5" : "Teacher",
+    "role6" :"Teacher"
+  }},
+"Services":"Services",
+"services":{
+"title" :{
+"title1" :"Specialized Courses",
+"title2" :"Hands-on Projects",
+"title3" : "Interactive Platforms"
+},
+"list1" : {
+  "lis1" : "Programming in languages like Python, JavaScript, Java, and C++",
+  "lis2" : "Mobile app development (Android and iOS) ",
+  "lis3" : "Artificial Intelligence and Machine Learning.",
+  "lis4" :"Data analysis and Data Science "
+},
+"list2" : {
+  "lis1":"Small projects to apply what you’ve learned",
+  "lis2":"Coding challenges to enhance skills",
+  "lis3" : "Competitions and events to foster creativity"
+},
+"list3"  : {
+  "lis1":"Online IDE for writing and executing code",
+  "lis2" : "Interactive quizzes to measure progress",
+  "lis3": "Discussion forums to connect with learners and experts."
+}
+
+    },
+
+   "Activity":"Activity",
+    "activity":{
+      "title" : {
+        "Title1" : "Educational trip",
+        "Title2" :"Discussion Panels",
+        "Title3" :"Weekly Coding Challenges"
+      },
+      "desc" :{
+      "Description1" : " Visits to technology companies or technology exhibitions",
+      "Description2" : "A group of people participating in a discussion ",
+      "Description3" : " Weekly coding challenges to improve students' skills"
+      },
+      "date" : {
+      "Date1" : "4/5/2025",
+      "Date2" : "3/2/2025",
+      "Date3" :"Every Monday"
+
+      }},
+      "Contact Us":"Contact Us",
+      "Name":"Name",
+      "Email":"Email",
+      "Message":"Message",
+      "Send Message":"Send Message",
+    "information":"information",
+      "phone":"phone",
+      "Location":"Location",
+      "Aqaba-Jordan":"Aqaba-Jordan",
+      "Our Location":"Our Location",
+      "logindes":" Welcome to Future Coders! We're excited to help your child explore the world of coding. Join uson a journey of learning and creativity—where every kid can become a future tech leader!",
+      "Loginqus":"  Don't have an account?",
+     "First Name":"First Name",
+       "Last Name":"Last Name",
+       "Email Address":"Email Address",
+       "Password":"Password",
+       "Already have an account?":"Already have an account?",
+       
+      "students" : {
+        "title" : "Our Young Coders", 
+
+       
+       
+       
+        "name" :{
+"name1" : "Ali",
+"name2": "Laila",  
+"name3":  "Yasser",
+"name4" : "Salma",
+"name5" : "Ahmed",
+"name6" : "Noor",
+"name7" : "Ziad",
+"name8":"Mariam",
+"name9" : "Hassan",
+"name10": "Nadia"
+
+},
+"bio":{
+  "bio1":"Loves programming with Scratch." ,
+  "bio2":"Enjoys building simple coding projects." ,
+  "bio3": "Explores robotics with Raspberry Pi." ,
+  "bio4":"Enjoys solving coding puzzles with Blockly." ,
+  "bio5":"Programs animated characters in Scratch.",
+  "bio6":"Loves experimenting with AI for kids.",
+  "bio7":"Learning to create interactive apps for kids.",
+  "bio8": "Aspires to be a robotics engineer!",
+  "bio9":"Enjoys coding in Minecraft Education.",
+  "bio10" :"Loves building interactive games!"
+}
+    
+  },
+  "partners-title":"partners"
+  }
+
+  
+
