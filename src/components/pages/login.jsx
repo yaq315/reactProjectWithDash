@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import logo from "../image/logo.png";
 import { useNavigate } from "react-router-dom";
-import  Navbar from "../navbar/Navbar"
+import Navbar from "../navbar/Navbar";
 import Footer from "../footer/Footer";
 import { useTranslation } from 'react-i18next';
 
 function Login() {
-  
-    const { t, i18n } = useTranslation(); 
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -18,8 +17,7 @@ function Login() {
     password: "",
   });
 
- const navigate = useNavigate();
-
+  const navigate = useNavigate();
 
   const validateField = (name, value) => {
     switch (name) {
@@ -39,8 +37,6 @@ function Login() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-
-    // Validate field
     setErrors({ ...errors, [name]: validateField(name, value) });
   };
 
@@ -51,42 +47,45 @@ function Login() {
     const newErrors = {};
     Object.keys(formData).forEach((field) => {
       newErrors[field] = validateField(field, formData[field]);
-
-      navigate("/signup");
     });
-
     setErrors(newErrors);
 
-   
-
-
+    // Check if there are no errors
     if (Object.values(newErrors).every((error) => error === "")) {
-      const storedUser = JSON.parse(localStorage.getItem("user"));
+      const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
 
-      if (
-        storedUser &&
-        storedUser.email === formData.email &&
-        storedUser.password === formData.password
-      ) {
+      // Check if the email and password match any stored user
+      const foundUser = storedUsers.find(
+        (user) => user.email === formData.email && user.password === formData.password
+      );
+
+      if (foundUser) {
         alert("Login successful!");
+        const username = formData.email.split('@')[1];
+
+        // Navigate based on the email domain
+        if (username === "teacher.com") {
+          navigate("/Dashboard");
+        }else if(username === "admin.com"){
+          navigate("/Admin")
+        }
+         else {
+          navigate("/Profile");
+        }
       } else {
         alert("Invalid email or password.");
       }
-      navigate("/Aboutpage")
     }
   };
 
   return (
     <div>
       <Navbar />
-            <section className="showcase">
+      <section className="showcase">
         <div className="overlay">
           <article className="left-section">
             <img src={logo} alt="Logo" className="logo" />
-            <p className="description">
-              {t("logindes")}
-         
-            </p>
+            <p className="description">{t("logindes")}</p>
           </article>
           <article className="right-section">
             <form className="form" onSubmit={handleSubmit}>
@@ -119,14 +118,14 @@ function Login() {
               </div>
 
               <button type="submit">{t("Login")}</button>
-              <p className="login-link">{t("Loginqus")} 
-               <a href="/signup"> {t("Sign Up")}</a>
-              </p>
+              {/* <p className="login-link">
+                {t("Loginqus")} <a href="/signup">{t("Sign Up")}</a>
+              </p> */}
             </form>
           </article>
         </div>
       </section>
-     < Footer />
+      <Footer />
     </div>
   );
 }

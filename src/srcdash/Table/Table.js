@@ -82,34 +82,6 @@ function Table() {
     <div className="recent_order">
       <h2>Schedule of Students</h2>
       <button onClick={handleAddStudentClick}>Add Student</button>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Student Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Age</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {students.map((student, index) => (
-            <tr key={index}>
-              <td>{student.name}</td>
-              <td>{student.email}</td>
-              <td>{student.phone}</td>
-              <td>{student.age}</td>
-              <td>
-                <button onClick={() => handleEditStudent(index)}>Edit</button>
-                <button onClick={() => handleDeleteStudent(index)}>Delete</button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      <a href="#">Show All</a>
-
       {showModal && (
         <div className="modal">
           <div className="modal-content">
@@ -147,6 +119,34 @@ function Table() {
           </div>
         </div>
       )}
+
+      <table>
+        <thead>
+          <tr>
+            <th>Student Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Age</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {students.map((student, index) => (
+            <tr key={index}>
+              <td>{student.name}</td>
+              <td>{student.email}</td>
+              <td>{student.phone}</td>
+              <td>{student.age}</td>
+              <td>
+                <button onClick={() => handleEditStudent(index)}>Edit</button>
+                <button onClick={() => handleDeleteStudent(index)}>Delete</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      
     </div>
   );
 }

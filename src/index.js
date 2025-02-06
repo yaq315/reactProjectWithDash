@@ -8,8 +8,8 @@ import Login from "./components/pages/login";
 import Aboutpage from "./components/pages/Aboutpage";
 import Contactbage from "./components/pages/Contactbage";
 import Dashboard from './srcdash/Dashboard/Dashboard';
-
-import Student from "./studentes/students"
+import Table from "./srcdash/Table/Table"
+import Profile from "./srcdash/Profile/profile"
 
 import './i18n'; 
 
@@ -22,13 +22,14 @@ return(
   <Routes>
     <Route path="/" element={<Homepage />} /> 
     <Route path="/Home" element={<Homepage />} /> 
-    <Route path="/signup" element={<Signup />} /> 
+    <Route path="/Admin" element={<Signup />} /> 
     <Route path="/login" element={<Login />} /> 
     <Route path="/Aboutpage" element={< Aboutpage/>} /> 
     <Route path="/Contactbage" element={< Contactbage/>} /> 
     <Route path="/Dashboard" element={< Dashboard/>} /> 
+    <Route path="/Profile" element={< Profile/>} /> 
     
-    <Route path="/Student" element={< Student/>} /> 
+    <Route path="/Student-Table" element={< Table />} /> 
 
   
   </Routes>

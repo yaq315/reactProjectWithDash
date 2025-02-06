@@ -1,10 +1,9 @@
-
 import React, { useState } from "react";
 import "./sign.css";
 import { useNavigate } from "react-router-dom";
 import logo from "../image/logo.png";
 import Navbar from "../navbar/Navbar";
-import Footer from "../footer/Footer"
+import Footer from "../footer/Footer";
 import { useTranslation } from 'react-i18next';
 
 function Signup() {
@@ -24,7 +23,6 @@ function Signup() {
   });
 
   const navigate = useNavigate();
-
 
   const validateField = (name, value) => {
     switch (name) {
@@ -64,8 +62,15 @@ function Signup() {
     if (Object.values(newErrors).every((error) => error === "")) {
       console.log("Form submitted successfully!", formData);
 
-      // Save user data to localStorage
-      localStorage.setItem("user", JSON.stringify(formData));
+      // Load existing users from localStorage
+      const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+
+      // Add new user to the array
+      existingUsers.push(formData);
+
+      // Save the updated users array back to localStorage
+      localStorage.setItem("users", JSON.stringify(existingUsers));
+
       alert("Account created successfully!");
 
       navigate("/login");
@@ -74,14 +79,13 @@ function Signup() {
 
   return (
     <div>
-
-    <Navbar />
+      <Navbar />
       <section className="showcase">
         <div className="overlay">
           <article className="left-section">
             <img src={logo} alt="Logo" className="logo" />
             <p className="description">
-            {t("logindes")}
+              {t("logindes")}
             </p>
           </article>
           <article className="right-section">
@@ -95,7 +99,6 @@ function Signup() {
                   value={formData.firstName}
                   onChange={handleChange}
                   className={errors.firstName ? "invalid" : "valid"}
-                  
                 />
                 {errors.firstName && <small className="error">{errors.firstName}</small>}
               </div>
@@ -108,7 +111,6 @@ function Signup() {
                   value={formData.lastName}
                   onChange={handleChange}
                   className={errors.lastName ? "invalid" : "valid"}
-                  
                 />
                 {errors.lastName && <small className="error">{errors.lastName}</small>}
               </div>
@@ -121,7 +123,6 @@ function Signup() {
                   value={formData.email}
                   onChange={handleChange}
                   className={errors.email ? "invalid" : "valid"}
-                  
                 />
                 {errors.email && <small className="error">{errors.email}</small>}
               </div>
@@ -134,7 +135,6 @@ function Signup() {
                   value={formData.password}
                   onChange={handleChange}
                   className={errors.password ? "invalid" : "valid"}
-                  
                 />
                 {errors.password && <small className="error">{errors.password}</small>}
               </div>
@@ -147,7 +147,7 @@ function Signup() {
           </article>
         </div>
       </section>
-     <Footer />
+      <Footer />
     </div>
   );
 }

@@ -10,9 +10,9 @@ function Sidebar() {
         <img src={logo} alt="Logo" />
       </div>
       <div className="sidebar">
-        <Link to="/teachers" className="active">Teachers</Link>
-        <Link to="/add-student" className="add-student-link">Add Student</Link>
-        <Link to="/logout" className="active">Log out</Link>
+        <Link to="/Profile" className="active">Profile</Link>
+        <Link to="/Student-Table" className="Students">Student</Link>
+        <Link to="/Home" className="active">Log out</Link>
       </div>
     </div>
   );
